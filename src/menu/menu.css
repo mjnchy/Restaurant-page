@@ -1,0 +1,118 @@
+:root {
+    --accent-color: rgb(204, 142, 27);
+}
+
+#menu-header-container {
+    position: relative;
+    text-align: center;
+    margin: 100px auto;
+    width: 50%;
+    height: 100px;
+    background-color: var(--accent-color);
+    border-radius: 12px;
+}
+
+#menu-header {
+    position: relative;
+    top: calc(50% - 1rem);
+    font-size: 2rem;
+}
+
+
+.menu-type {
+    width: 85%;
+    margin: 75px auto;
+    display: grid;
+    grid-template: repeat(1, 1fr) / repeat(2, 1fr);
+    gap: 50px 12.5%;
+}
+
+.type-heading {
+    margin: 25px auto 75px;
+    grid-column: span 2;
+    grid-row-end: 1;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.menu-item {
+    position: relative;
+    display: flex;
+    gap: 10px;
+    width: clamp(400px, 100%, 1080px);
+    justify-content: space-around;
+}
+
+.div-info {
+    flex: 0 0 70%;
+}
+
+.menu-item:nth-child(2)  > .div-picture {
+    background: no-repeat url(./images/korean-barbecue.jpg);
+    background-size: 200px 100%;
+}
+
+.menu-item:nth-child(3)  > .div-picture {
+    background: no-repeat url(./images/shardar-tarikul-islam-93-GlZeWEZA-unsplash.jpg);
+    background-size: 200px 100%;
+}
+
+.menu-item:nth-child(4)  > .div-picture {
+    background: no-repeat url(./images/ikhsan-baihaqi-pbc2wXbQYpI-unsplash.jpg);
+    background-size: 200px 100%;
+}
+
+.menu-item:nth-child(5)  > .div-picture {
+    background: no-repeat url(./images/annie-spratt-oT7_v-I0hHg-unsplash.jpg);
+    background-size: 200px 100%;
+}
+
+.menu-item:nth-child(6)  > .div-picture {
+    background: no-repeat url(./images/markus-spiske-Gej8FOFLlHg-unsplash.jpg);
+    background-size: 200px 100%;
+}
+
+.menu-item:nth-child(7)  > .div-picture {
+    background: no-repeat url(./images/chicken-biryani.jpg);
+    background-size: 200px 100%;
+}
+
+.div-picture {
+    position: relative;
+    flex: 0 0 150px;
+    height: 175px;
+    top: 20px;
+    border-radius: 8px;
+}
+
+.item-name {
+    font-weight: 700;
+    font-size: 1.45rem;
+    margin: 10px 0 20px;
+}
+
+.item-description {
+    font-size: 1.15rem;
+    line-height: 1.35;
+
+}
+
+.add-to-cart-btn {
+    background-color: rgb(58, 61, 66);
+    font-size: 1.15rem;
+    height: 45px;
+    width: 150px;
+    border-radius: 8px;
+    border: none;
+    position: relative;
+    left: calc(100% - 160px);
+    margin: 20px 0 0 5px;
+    transition: ease, 175ms;
+}
+
+.add-to-cart-btn:hover {
+    color: black;
+    transform: scale(1.05);
+    cursor: pointer;
+    background-color: var(--accent-color);
+}

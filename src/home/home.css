@@ -1,0 +1,45 @@
+#main-div {
+    text-align: center;
+    width: 70%;
+    height: 100vh;
+    margin: 70px auto;
+}
+
+.home-content-div:nth-child(1) {
+    background: no-repeat url(../images/tim-toomey-STqHLqMne3k-unsplash.jpg);
+}
+
+.home-content-div:nth-child(3) {
+    background: no-repeat url(../images/jason-leung-poI7DelFiVA-unsplash.jpg);
+}
+
+.home-content-div:is(:nth-child(1), :nth-child(3)) {
+    height: clamp(600px, 100%, 820px);
+    margin: 50px auto;
+    width: 100%;
+    background-size: 100% 780px;
+}
+
+#paragraph-one, #paragraph-three {
+    position: relative;
+    font-size: 3rem;
+    inset: 45% 0 0;
+}
+
+#paragraph-two {
+    font-size: 1.5rem;
+    line-height: 1.75;
+}
+
+#paragraph-three {
+    font-size: 2rem;
+    inset: 25% 0;
+}
+
+#location-link {
+    transition: ease-in, 250ms;
+}
+
+#location-link:hover {
+    font-size: 2.25rem;
+}
