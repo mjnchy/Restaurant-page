@@ -58,3 +58,11 @@ body {
 #wraper {
 	height: 100%;
 }
+
+.nav-item:hover {
+	cursor: pointer;
+}
+
+.nav-item[data-active = 'true'] {
+	border-bottom: 2px solid aliceblue;
+}

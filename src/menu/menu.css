@@ -20,7 +20,7 @@
 
 
 .menu-type {
-    width: 85%;
+    width: 75%;
     margin: 75px auto;
     display: grid;
     grid-template: repeat(1, 1fr) / repeat(2, 1fr);
@@ -38,9 +38,9 @@
 .menu-item {
     position: relative;
     display: flex;
-    gap: 10px;
+    gap: 35px;
     width: clamp(400px, 100%, 1080px);
-    justify-content: space-around;
+    justify-content: center;
 }
 
 .div-info {
@@ -80,7 +80,7 @@
 .div-picture {
     position: relative;
     flex: 0 0 150px;
-    height: 175px;
+    height: 150px;
     top: 20px;
     border-radius: 8px;
 }

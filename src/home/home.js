@@ -39,8 +39,6 @@ function homeTemplate () {
     }
     
     divList[2].firstChild.append(createLink());
-
-    console.log(divList)
     
     return divMain;
 }

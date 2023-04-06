@@ -45,7 +45,7 @@ function createMenu() {
 
         div.append(h2);
         
-        return div;
+        divMenu.append(div);
     };
 
     function createItem(name, description, type, toAppend) {
@@ -133,10 +133,7 @@ function createMenu() {
     createDinnernMenu('Spinach soup', 'The classic spinach soup');
     createDinnernMenu('Overdrive Sub', 'Our overdrive footlong sub');
 
-    return {
-        divMenu,
-        createMenuHeader,
-    };
+    return divMenu;
 };
 
 export {

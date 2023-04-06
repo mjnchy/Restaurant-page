@@ -16,6 +16,8 @@ module.exports = {
 		  },
 		],
 	  },
+
+	  devtool: 'eval',
 	
 	devServer: {
 		static: './dist',
