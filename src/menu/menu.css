@@ -25,18 +25,20 @@
     display: grid;
     grid-template: repeat(1, 1fr) / repeat(2, 1fr);
     gap: 5px clamp(20px, 3%, 35px);
-    background-color: rgb(85, 85, 85);
+    background-color: rgb(44, 44, 44);
     border-radius: 12px;
     justify-content: center;
 }
 
 .menu-type-declaration {
-    width: clamp(250px, 20%, 300px);
-    height: 125px;
+    width: clamp(200px, 20%, 250px);
+    height: 65px;
     margin: 50px auto;
     grid-column: span 2;
     grid-row-end: 1;
     text-align: center;
+    background-color: var(--accent-color);
+    border-radius: 12px;
 }
 
 .type-heading {
@@ -54,6 +56,10 @@
     align-self: center;
     justify-self: center;
     margin: 20px auto;
+}
+
+.menu-type > .menu-item:is(:last-child, :nth-last-child(2)) {
+    margin-bottom: 50px;
 }
 
 .div-info {
