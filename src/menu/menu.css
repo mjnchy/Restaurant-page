@@ -6,7 +6,7 @@
     position: relative;
     text-align: center;
     margin: 100px auto;
-    width: 50%;
+    width: clamp(350px, 20%, 25%);
     height: 100px;
     background-color: var(--accent-color);
     border-radius: 12px;
@@ -20,31 +20,44 @@
 
 
 .menu-type {
-    width: 75%;
+    width: clamp(600px, 75%, 1200px);
     margin: 75px auto;
     display: grid;
     grid-template: repeat(1, 1fr) / repeat(2, 1fr);
-    gap: 50px 12.5%;
+    gap: 5px clamp(20px, 3%, 35px);
+    background-color: rgb(85, 85, 85);
+    border-radius: 12px;
+    justify-content: center;
 }
 
-.type-heading {
-    margin: 25px auto 75px;
+.menu-type-declaration {
+    width: clamp(250px, 20%, 300px);
+    height: 125px;
+    margin: 50px auto;
     grid-column: span 2;
     grid-row-end: 1;
     text-align: center;
+}
+
+.type-heading {
+    position: relative;
     font-size: 2rem;
+    top: calc(50% - 1rem);
 }
 
 .menu-item {
     position: relative;
     display: flex;
-    gap: 35px;
-    width: clamp(400px, 100%, 1080px);
-    justify-content: center;
+    gap: 20px;
+    width: clamp(300px, 80%, 1080px);
+    height: 225px;
+    align-self: center;
+    justify-self: center;
+    margin: 20px auto;
 }
 
 .div-info {
-    flex: 0 0 70%;
+    flex: 0 0 calc(100% - 175px);
 }
 
 .menu-item:nth-child(2)  > .div-picture {
@@ -104,9 +117,10 @@
     width: 150px;
     border-radius: 8px;
     border: none;
-    position: relative;
-    left: calc(100% - 160px);
-    margin: 20px 0 0 5px;
+    position: absolute;
+    left: 10px;
+    top: calc(100% - 65px);
+    margin: 20px 0;
     transition: ease, 175ms;
 }
 
@@ -115,4 +129,20 @@
     transform: scale(1.05);
     cursor: pointer;
     background-color: var(--accent-color);
+}
+
+@media (1250px < width <= 1450px) {
+    .menu-item {
+        height: calc(100% - 50px);
+    }
+    .add-to-cart-btn {
+        position: static;
+        margin: 10px auto;
+    }
+}
+
+@media (width <= 1250px) {
+    .menu-type {
+        display: block;
+    }
 }

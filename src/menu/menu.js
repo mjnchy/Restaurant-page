@@ -9,12 +9,17 @@ function createMenu() {
         div.classList.add('menu-type');
         div.id = `menu-${type}`;
 
+        const subDiv = document.createElement('div');
+        subDiv.classList.add('menu-type-declaration');
+        subDiv.id = `menu-${type}-declaration`;
+
         const h2 = document.createElement('h2');
         h2.classList.add('type-heading');
         h2.id = `${type}-heading`;
         h2.textContent = `${type.charAt(0).toUpperCase() + type.slice(1)}`;
 
-        div.append(h2);
+        subDiv.append(h2);
+        div.append(subDiv);
 
         return div;
     };
